@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">SoundBox</string>
+
+    // LoginActivity
+    <string name="loginActivity_welcome">Welcome to SoundBox</string>
+    <string name="loginActivity_message">Login to your SoundBox account to enjoy all the free
+        songs....</string>
+
+    <string name="loginActivity_emailHint">Email</string>
+    <string name="loginActivity_passwordHint">Password</string>
+
+    <string name="loginActivity_loginBtn">Login</string>
+    <string name="loginActivity_forgetPW">Forget Password?</string>
+
+    <string name="loginActivity_SignUp_message">"Don't have an account?"</string>
+    <string name="loginActivity_SignUp_btn">Sign Up</string>
+
+
+    // Sign-Up Activity
+    <string name="signUpActivity_message">Enter your information to create your own
+        SoundBox account.</string>
+
+    <string name="signUpActivity_nameHint">Name</string>
+    <string name="signUpActivity_emailHint">Email</string>
+    <string name="signUpActivity_passwordHint">Password</string>
+    <string name="signUpActivity_re_passwordHint">Re-Password</string>
+
+    <string name="signUpActivity_SignUpBtn">Sign Up</string>
+    <string name="signUpActivity_privacy_checkbox">I agree to the</string>
+    <string name="signUpActivity_privacy_btn">Privacy Policy</string>
+
+    <string name="signUpActivity_Login_message">"Already have an account?"</string>
+    <string name="signUpActivity_Login_btn">Login</string>
+
+
+    // BottomNavigation
+    <string name="bn_home">Home</string>
+    <string name="bn_search">Search</string>
+    <string name="bn_radio">Radio</string>
+    <string name="bn_shazam">Shazam</string>
+    <string name="bn_more">More</string>
+
+
+    // Home Fragment
+    <string name="homeFragment_wlc_shuffle_hey">Hey User</string>
+    <string name="homeFragment_wlc_shuffle_wlc">Welcome to SoundBox</string>
+    <string name="homeFragment_wlc_shuffle_tap">Tap to Shuffle</string>
+
+    <string name="homeFragment_recent_line">Recent</string>
+    <string name="homeFragment_recent_song_title">Song Title</string>
+    <string name="homeFragment_recent_song_album">Song Album</string>
+
+
+    <string name="homeFragment_Songs_line">Songs</string>
+
+    // Player Activity
+    <string name="playerActivity_premium_account_message">Premium account is needed to activate
+        the option!</string>
+
+
+    // Search Fragment
+    <string name="searchFragment_search_hint">Search…</string>
+
+    // Radio Fragment
+
+    // Shazam Fragment
+
+    // MoreFragment
+    <string name="moreFragment_account">Account</string>
+    <string name="moreFragment_account_premium_account">Premium Account</string>
+    <string name="moreFragment_account_premium_account_message">There is no plan for premium
+        accounts</string>
+    <string name="moreFragment_account_edit_account">Edit Account</string>
+    <string name="moreFragment_account_edit_account_message">This option is not available yet</string>
+    <string name="moreFragment_account_log_out">Log out</string>
+
+    <string name="moreFragment_settings">Settings</string>
+    <string name="moreFragment_settings_language">Language (Soon)</string>
+    <string name="moreFragment_settings_light_mode">Light Mode (Soon)</string>
+
+    <string name="moreFragment_support">Support</string>
+    <string name="moreFragment_support_feedback">Feedback</string>
+    <string name="moreFragment_support_feedback_via">Feedback Via</string>
+    <string name="moreFragment_support_invite_friends">Invite Friends</string>
+    <string name="moreFragment_support_invite_friends_via">Invite Friends Via</string>
+
+    <string name="moreFragment_about_us">About Us</string>
+    <string name="moreFragment_about_us_text">Tap to learn more…</string>
+
+    <string name="moreFragment_check_for_update">Check for update</string>
+    <string name="moreFragment_check_for_update_text">Check out the SoundBox update.</string>
+    <string name="moreFragment_check_for_update_version">"Current Version: "</string>
+
+
+    // AlertDialog
+    <string name="alertDialog_title">No network connection!</string>
+    <string name="alertDialog_message">Please check your connection and try again</string>
+
+    <string name="alertDialog_positiveButton">Try Again</string>
+    <string name="alertDialog_negativeButton">Exit</string>
+
+</resources>

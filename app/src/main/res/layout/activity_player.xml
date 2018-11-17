@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:paddingEnd="5dp"
+    android:paddingStart="5dp"
+    tools:context=".PlayerActivity">
+
+    <!--Music Cover-->
+    <ImageView
+        android:id="@+id/iv_player_song_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_song_title_band"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:contentDescription="Song cover"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sound_box_music_cover_01"
+        tools:ignore="HardcodedText" />
+
+    <!--Music Details-->
+    <RelativeLayout
+        android:id="@+id/rl_song_title_band"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sb_music_progress"
+        android:layout_alignEnd="@+id/iv_player_song_cover"
+        android:layout_alignStart="@+id/iv_player_song_cover"
+        android:layout_gravity="center"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/li_player_activity_song_band"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2.5dp"
+            android:layout_marginStart="2.5dp"
+            android:layout_toEndOf="@+id/btn_invisible"
+            android:layout_toStartOf="@+id/btn_favorite"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_player_song_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Heavy (Feat. Kiiara)"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/tv_player_album_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="One More Light (2017)"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <!--Favorite Icon-->
+        <ImageButton
+            android:id="@+id/btn_invisible"
+            style="@android:style/Widget.Holo.Button.Borderless.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorite Boarder"
+            android:src="@drawable/ic_favorite_white"
+            android:visibility="invisible"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/btn_favorite"
+            style="@android:style/Widget.Holo.Button.Borderless.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:onClick="favoriteOnClick"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorite Boarder"
+            android:src="@drawable/ic_favorite_border_white"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <!--SeekBar-->
+    <SeekBar
+        android:id="@+id/sb_music_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_music_time"
+        android:layout_alignEnd="@id/iv_player_song_cover"
+        android:layout_alignStart="@id/iv_player_song_cover"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="15dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_music_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_buttons"
+        android:layout_alignEnd="@+id/sb_music_progress"
+        android:layout_alignStart="@+id/sb_music_progress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_player_time_current_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_player_time_current_sec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="49"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_player_time_length_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_player_time_length_sec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="49"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Buttons-->
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ll_music_time"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/ll_music_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <ImageButton
+            android:id="@+id/btn_repeat"
+            style="@android:style/Widget.Holo.Button.Borderless.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Repeat Button"
+            android:onClick="repeatOnClick"
+            android:src="@drawable/ic_repeat_one_white"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_backward"
+                style="@android:style/Widget.Holo.Button.Borderless.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="backwardOnClick"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Previous Button"
+                android:src="@drawable/ic_backward_white"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:id="@+id/btn_play"
+                style="@android:style/Widget.Holo.Button.Borderless.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="playOnClick"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Play Button"
+                android:src="@drawable/ic_pause_white"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:id="@+id/btn_forward"
+                style="@android:style/Widget.Holo.Button.Borderless.Small"
+                android:layout_width="wrap_content"
+                android:onClick="forwardOnClick"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Next Button"
+                android:src="@drawable/ic_forward_white"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_shuffle"
+            style="@android:style/Widget.Holo.Button.Borderless.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="shuffleOnClick"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Shuffle Button"
+            android:src="@drawable/ic_shuffle_off_white"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</RelativeLayout>

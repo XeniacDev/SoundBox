@@ -18,7 +18,11 @@ SoundBox is a free android music player with some extra features such as online 
 - XML
 
 ## Screenshots
-<img src="http://dl.cafedl.com/SoundBox/Splash%20Screen%20-%20P1.jpg" width="208" height="368" />
-<img src="http://dl.cafedl.com/SoundBox/Login%20Page%20-%20P1.jpg" width="208" height="368" />
-<img src="http://dl.cafedl.com/SoundBox/Home%20Fragment%20-%20P1.jpg" width="208" height="368" />
-<img src="http://dl.cafedl.com/SoundBox/player.P1.jpg" width="208" height="368" />
+<center>
+<div>
+  <img src="http://dl.cafedl.com/SoundBox/Splash%20Screen%20-%20P1.jpg" width="208" height="368" inline-block;/>
+  <img src="http://dl.cafedl.com/SoundBox/Login%20Page%20-%20P1.jpg" width="208" height="368" inline-block/>
+  <img src="http://dl.cafedl.com/SoundBox/Home%20Fragment%20-%20P1.jpg" width="208" height="368" inline-block/>
+  <img src="http://dl.cafedl.com/SoundBox/player.P1.jpg" width="208" height="368" inline-block;/>
+<div/>
+<center/>
